@@ -41,3 +41,39 @@ p {
 body {
   width: 100%;
 }
+
+/* header */
+#header {
+  display: flex; /* Flex 아이템들은 가로 방향으로 배치되고, 자신이 가진 내용물의 width 만큼만 차지하게 된다. 마치 inline 요소들 처럼 */
+  align-items: center;
+  justify-content: space-between; /*요소들 사이에 동일한 간격*/
+  padding: 20px 80px;
+  background: #e3e6f3;
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.5); /*x-position y-position blur spread color */
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /*center로 해도 똑같은 결과가 나왔다 여기서는*/
+}
+
+#navbar li {
+  list-style: none; /*앞에 list 항목 동그라미 없애줌*/
+  padding: 0 20px; /*bottom top left right*/
+}
+
+#navbar li a {
+  text-decoration: none; /*링크의 밑줄 없앰(보라색으로 색 바뀌는 것도 없어짐) */
+  font-size: 16px;
+  font-weight: 600;
+  color: royalblue;
+  transition: 0.3s ease; /*변화가 있을 때 0.3초 딜레이 줌*/
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+  /*active class/* --> 해당 페이지면 목록 색깔 하이라이트 처리
+  /*마우스 위로 갖다대면 색 바뀜 처리*/
+  color: #05b96b;
+}
