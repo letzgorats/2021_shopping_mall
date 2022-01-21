@@ -48,8 +48,13 @@ body {
   align-items: center;
   justify-content: space-between; /*요소들 사이에 동일한 간격*/
   padding: 20px 80px;
-  background: #dc78af;
-  box-shadow: 0 20px 80px rgba(0, 211, 235, 0.5); /*x-position y-position blur spread color */
+  /*대각선 방향으로 그라데이션을 입히고 싶을 때 deg가 유용*/
+  background: linear-gradient(45deg, Violet, Orange);
+  box-shadow: 0 40px 40px rgba(0, 211, 235, 0.5); /*x-position y-position blur spread color */
+  z-index: 999; /*맨 앞으로 보내는 속성이라고 보면 된다 . 음수면 맨 뒤로이다. z-index로 상대적으로 위아래 포개지는 차이를 표현할 수 있음.*/
+  position: sticky; /*스크롤을 내려도 header가 언제나 보이게 하는 속성*/
+  top: 0;
+  left: 0;
 }
 
 #navbar {
@@ -101,17 +106,56 @@ body {
 /*Home Page*/
 #hero {
   background-image: url("img/background2.jpg");
-  /*vh요소는 높이값의 100분의 1의 단위*/
+  background-repeat: no-repeat;
   background-color: transparent;
-  height: 90vh;
-  width: 80%; /*예를 들어 900px 일 때 1vh는 9px*/
+  margin: auto;
+  /*vh요소는 높이값의 100분의 1의 단위*/
+  height: 100vh; /*예를 들어 900px 일 때 1vh는 9px*/
+  width: 90%;
   /* width: 100%; */
   /*contain과 cover는 같은 뜻, 너비 값만 사용, 높이는 자동으로 auto*/
   /*이미지가 찌그러지지 않는 한도 내에서 제일 크게 설정.*/
   background-size: cover;
+  background-position: bottom 40px center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* justify-content: center; */
+}
 
-  background-position: top 80% left 50%;
+#herodiv {
+  padding-left: 30px;
+}
+
+#hero h4 {
+  padding-bottom: 30px;
+}
+
+#hero h1 {
+  padding-bottom: 15px;
+  color: #05b96b;
+}
+@keyframes rotate_image {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#hero button {
+  background-color: rgb(211, 125, 13);
+  /*
+  rotate_image 라는 이름을 가진 키프레임을 실행시키라는 소리
+  6s : 6초에 한번씩 (animation-duration)
+  linear : 동일한 속도로 (animation-timing-function)
+  ease : 천천히 시작되고, 속도가 줄어들면서 끝남.
+  ...
+  */
+  animation: rotate_image 6s ease infinite;
+  transform-origin: 50% 50%; /*비율에 따라 회전중심이 달라짐*/
+  background-repeat: no-repeat;
+  width: 280px;
+  height: 150px;
   /* background-color: transparent; */
-  /* color: #888178; */
+  /* color: #c5088c; */
   /* border: 0; */
+  padding: 20px -30px 14px 65px;
 }
