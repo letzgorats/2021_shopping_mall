@@ -48,8 +48,8 @@ body {
   align-items: center;
   justify-content: space-between; /*요소들 사이에 동일한 간격*/
   padding: 20px 80px;
-  background: #e3e6f3;
-  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.5); /*x-position y-position blur spread color */
+  background: #dc78af;
+  box-shadow: 0 20px 80px rgba(0, 211, 235, 0.5); /*x-position y-position blur spread color */
 }
 
 #navbar {
@@ -100,5 +100,18 @@ body {
 
 /*Home Page*/
 #hero {
-  background-image: url("img/logo.jpg");
+  background-image: url("img/background2.jpg");
+  /*vh요소는 높이값의 100분의 1의 단위*/
+  background-color: transparent;
+  height: 90vh;
+  width: 80%; /*예를 들어 900px 일 때 1vh는 9px*/
+  /* width: 100%; */
+  /*contain과 cover는 같은 뜻, 너비 값만 사용, 높이는 자동으로 auto*/
+  /*이미지가 찌그러지지 않는 한도 내에서 제일 크게 설정.*/
+  background-size: cover;
+
+  background-position: top 80% left 50%;
+  /* background-color: transparent; */
+  /* color: #888178; */
+  /* border: 0; */
 }
