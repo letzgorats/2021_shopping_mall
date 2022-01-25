@@ -159,3 +159,8 @@ body {
   /* border: 0; */
   padding: 20px -30px 14px 65px;
 }
+
+#feature .fe-box {
+  width: 180px;
+  text-align: center;
+}
