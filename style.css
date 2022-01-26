@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&family=Rubik+Beastly&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Spartan", sans-serif;
 }
 
 h1 {
@@ -14,9 +14,10 @@ h1 {
 }
 
 h2 {
-  font-size: 46px;
+  font-size: 47px;
   line-height: 54px;
   color: #222;
+  font-family: "Love Ya Like A Sister", cursive !important;
 }
 h4 {
   font-size: 20px;
@@ -40,6 +41,53 @@ p {
 
 body {
   width: 100%;
+  font-family: "Spartan", sans-serif;
+  padding: 10px;
+  background: #f3f3f3;
+  background: linear-gradient(
+    70deg,
+    #f3f3f3,
+    pink,
+    royalblue,
+    rgb(119, 128, 0)
+  );
+  /* background-size: 30px 25px; */
+}
+
+@keyframes wave {
+  0% {
+    transform: translate(-50%) rotate(-180deg);
+  }
+  100% {
+    transform: translate(-50%) rotate(360deg);
+  }
+}
+
+@keyframes shine {
+  0% {
+    border-color: #ff2a2a;
+  }
+  15% {
+    border-color: #ff7a2a;
+  }
+  30% {
+    border-color: #ffc52a;
+  }
+  45% {
+    border-color: #43ff2a;
+  }
+  60% {
+    border-color: #2a89ff;
+  }
+  75% {
+    border-color: #202082;
+  }
+  90% {
+    border-color: #6b2aff;
+  }
+  100% {
+    border-color: #e82aff;
+  }
 }
 
 /* header */
@@ -49,23 +97,75 @@ body {
   justify-content: space-between; /*요소들 사이에 동일한 간격*/
   padding: 20px 80px;
   /*대각선 방향으로 그라데이션을 입히고 싶을 때 deg가 유용*/
-  background: linear-gradient(45deg, Violet, Orange);
+  background: linear-gradient(45deg, #ee82ee, Orange);
   box-shadow: 0 40px 40px rgba(0, 211, 235, 0.5); /*x-position y-position blur spread color */
   z-index: 999; /*맨 앞으로 보내는 속성이라고 보면 된다 . 음수면 맨 뒤로이다. z-index로 상대적으로 위아래 포개지는 차이를 표현할 수 있음.*/
-  position: sticky; /*스크롤을 내려도 header가 언제나 보이게 하는 속성*/
+  /*position: sticky; /*스크롤을 내려도 header가 언제나 보이게 하는 속성*/
   top: 0;
   left: 0;
+  font-family: "Love Ya Like A Sister", cursive !important;
+  border-radius: 10px;
+  /* transition: top 0.2s ease-in-out; */
+  /* background-size: 20px 20px; */
+}
+
+#header::before,
+#header::after {
+  content: "";
+  position: absolute;
+  top: 155px;
+  left: 0;
+  right: 0;
+  /* bottom: 10px; */
+  height: 50px;
+  /* background: linear-gradient(45deg, #ee82ee, Orange); */
+  background: radial-gradient(
+    closest-side,
+    #f3f3f3,
+    #f3f3f3 50%,
+    transparent 50%
+  );
+  background-size: 50px 50px;
+  background-position: 0 25px; /*x-position, y-position*/
+  background-repeat: repeat-x;
+}
+
+#header::after {
+  background: radial-gradient(
+    closest-side,
+    transparent,
+    transparent 50%,
+    #ee82ee,
+    50%
+  );
+  background-size: 50px 50px;
+  background-position: 25px -25px; /*x-position, y-position*/
+  background-repeat: repeat-x;
+  /* bottom: -50px; */
+  top: 205px;
 }
 
 #navbar {
   display: flex;
   align-items: center;
   justify-content: space-between; /*center로 해도 똑같은 결과가 나왔다 여기서는*/
+  /* margin: 50px; */
+  padding: 50px;
+  border-radius: 10px;
+  border: 4px dotted rgba(204, 6, 138, 0.925); /*두께 색상 */
+  animation: shine 3s linear infinite;
+  border-radius: 50%;
 }
 
 #navbar li {
   list-style: none; /*앞에 list 항목 동그라미 없애줌*/
   padding: 0 20px; /*bottom top left right*/
+  background: repeating-radial-gradient(
+    #ee82ee,
+    orange 1px,
+    #43ff2a 1px,
+    white 1px
+  );
   position: relative; /*relative : 위치를 계산할때 static의 원래 위치부터 계산함.*/
 }
 
@@ -73,7 +173,7 @@ body {
   text-decoration: none; /*링크의 밑줄 없앰(보라색으로 색 바뀌는 것도 없어짐) */
   font-size: 16px;
   font-weight: 600;
-  color: royalblue;
+  color: white;
   transition: 0.3s ease; /*변화가 있을 때 0.3초 딜레이 줌*/
 }
 
@@ -120,6 +220,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  border-radius: 40%;
   /* justify-content: center; */
 }
 
@@ -161,6 +262,30 @@ body {
 }
 
 #feature .fe-box {
-  width: 180px;
+  width: 250px;
   text-align: center;
+  padding: 25px 15px;
+  box-shadow: 10px 20px 40px rgba(219, 13, 13, 0.925); /* x-position y-position blur spread color */
+  border: 2px solid rgba(219, 13, 13, 0.925); /*두께 색상*/
+  border-radius: 30%;
+  /* box-shadow: 10px 20px 40px rgba(156, 248, 8, 0.925); x-position y-position blur spread color */
+  /* border: 2px solid rgba(156, 248, 8, 0.925); 두께 색상 */
+}
+
+#feature .fe-box img #feature .fe-box:hover {
+  box-shadow: 10px 10px 54px rgba(235, 114, 0, 0.897);
+  border: 2px solid rgba(235, 114, 0, 0.897);
+}
+
+#feature .fe-box h6 {
+  padding: 9px 8px 6px 10px; /*top left bottom right*/
+  line-height: 2px;
+  border-radius: 4px;
+  border-radius: 30%; /* 테두리를 둥글게 만드는 속성- px 단우와 %사용 가능*/
+  /*border-radius : aa 는 border-radius: aa aa aa aa / aa aa aa aa 와 같은 뜻*/
+  background: repeating-radial-gradient(
+    rgb(223, 40, 27),
+    /* black 1px, */ #f58d05 3px,
+    white 3px
+  );
 }
