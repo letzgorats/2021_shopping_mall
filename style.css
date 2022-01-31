@@ -52,6 +52,18 @@ button.normal {
   transition: 0.2s;
 }
 
+button.white {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 18px;
+  color: rgb(250, 249, 249);
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
 body {
   width: 100%;
   font-family: "Spartan", sans-serif;
@@ -499,4 +511,200 @@ body {
 #banner button:hover {
   background-color: white;
   color: rgb(62, 19, 250);
+}
+
+#sm-banner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#sm-banner .banner-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  /* text-align: center; */
+  background-image: url("img/banner_logo.jpg");
+  /* background-position: 150px 30px; */
+  background-position: center;
+  /* background-repeat: no-repeat; */
+  min-width: 500px;
+  height: 50vh;
+  background-size: cover;
+  border-radius: 20%;
+  padding: 20px;
+}
+#sm-banner h4 {
+  color: rgb(3, 24, 4);
+  font-size: 20px;
+  font-weight: 300;
+}
+
+#sm-banner h2 {
+  color: white;
+  font-size: 28px;
+  font-weight: 400;
+  padding-bottom: 12px;
+}
+
+#sm-banner span {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  padding-bottom: 15px;
+}
+
+#sm-banner .banner-box:hover button {
+  background: #0462db;
+  border: 1px solid #0462db;
+}
+
+#sm-banner .banner-box2 {
+  background-image: url("img/album_logo.jpg");
+  background-position: 50px 50px 50px 50px;
+  /* background-repeat: no-repeat; */
+  /* border-radius: 30%; */
+}
+
+#banner3 {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 80px;
+}
+
+#banner3 .banner-box {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: flex-start;
+  background-image: url("img/background5.jpg");
+  background-position: center;
+  min-width: 30%;
+  height: 50vh;
+  background-size: cover;
+  border-radius: 20%;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#banner3 .banner-box2 {
+  justify-content: center;
+  background-image: url("img/background4.jpg");
+}
+
+#banner3 .banner-box3 {
+  /* justify-content: center; */
+  background-image: url("img/aloo1.jpg");
+}
+
+#banner3 h2 {
+  color: white;
+  font-weight: 900;
+  font-size: 22px;
+}
+
+#banner3 h3 {
+  color: rgb(223, 2, 2);
+  font-weight: 800;
+  font-size: 15px;
+}
+
+#newsletter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  background-image: url(img/background7.jpg);
+  min-height: 100px;
+  background-position: no-repeat;
+  background-position: 20% 30%;
+  background-color: rgb(223, 16, 188);
+  border: 2px solid rgb(19, 1, 16);
+}
+
+#newsletter h4 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+
+#newsletter p {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(241, 245, 242);
+}
+
+#newsletter p span {
+  color: #ebe713;
+}
+
+#newsletter .form {
+  display: flex;
+  width: 40%;
+}
+
+#newsletter input {
+  height: 3.125rem; /*rm : html 요소의 크기의 몇 배인지로 크기를 정합*/
+  padding: 0 1.25em; /*em: 상위요소의 크기의 몇 배인지로 크기를 정함*/
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: none;
+  border-top-right-radius: 0; /*오른쪽 상단 border radiius 없애줌*/
+  border-bottom-right-radius: 0; /*오른쪽 하단 border radiius 없애줌*/
+}
+
+#newsletter button {
+  white-space: nowrap; /*공백처리 : 병합 */
+  border-top-left-radius: 0; /*왼쪽 상단 border radiius 없애줌*/
+  border-bottom-left-radius: 0; /*왼쪽 하단 border radiius 없애줌*/
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+footer .logo {
+  margin-bottom: 30px;
+}
+
+footer h4 {
+  font-size: 14px;
+  padding-bottom: 20px;
+}
+
+footer p {
+  font-size: 13px;
+  margin: 0 0 8px 0; /*top right bottom left*/
+}
+
+footer a {
+  font-size: 13px;
+  text-decoration: none;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+footer .follow {
+  margin-top: 20px;
+}
+
+footer .follow i {
+  color: #465b52;
+  padding-right: 4px;
+  cursor: pointer;
 }
