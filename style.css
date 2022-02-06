@@ -228,6 +228,11 @@ body {
   left: 20px;
 }
 
+#mobile {
+  display: none;
+  align-items: center;
+}
+
 /*Home Page*/
 #hero {
   background-image: url("img/background2.jpg");
@@ -668,6 +673,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  font-family: "Love Ya Like A Sister", cursive !important;
 }
 
 footer .col {
@@ -680,6 +686,9 @@ footer .col {
 
 footer .logo {
   margin-bottom: 30px;
+  width: 150px;
+  height: 200px;
+  border-radius: 30%;
 }
 
 footer h4 {
@@ -707,4 +716,97 @@ footer .follow i {
   color: #465b52;
   padding-right: 4px;
   cursor: pointer;
+}
+
+footer .install .row {
+  border: 6px solid #ea0df1;
+}
+
+footer .install .row img {
+  border: 6px solid #0462db;
+  border-radius: 6px;
+}
+
+footer .install img {
+  margin: 10px 0 15px 0;
+}
+
+footer .follow i:hover,
+footer a:hover {
+  color: #c30cdb;
+}
+
+footer .copyright {
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 799px) {
+  .first_img,
+  .second_img {
+    display: none;
+  }
+  #navbar {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    /* margin: 50px; */
+    background-color: #6b2aff;
+    box-shadow: 0 40px 60px rgba(219, 13, 13, 0.925);
+    padding: 80px 0 0 10px;
+    /* border-radius: 10px;
+    border: 4px dotted rgba(204, 6, 138, 0.925);
+    animation: shine 3s linear infinite;
+    border-radius: 50%; */
+    transition: 0.3s;
+  }
+
+  #navbar.active {
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    top: 0;
+    /* right: 0px; */
+    height: 100vh;
+    width: 300px;
+    /* margin: 50px; */
+    background-color: #6b2aff;
+    box-shadow: 0 40px 60px rgba(219, 13, 13, 0.925);
+    padding: 80px 0 0 10px;
+    /* border-radius: 10px;
+    border: 4px dotted rgba(204, 6, 138, 0.925);
+    animation: shine 3s linear infinite;
+    border-radius: 50%; */
+    transition: 0.3s;
+  }
+
+  #navbar li {
+    margin-bottom: 25px;
+  }
+  #mobile {
+    display: flex;
+    align-items: center;
+  }
+  #mobile i {
+    color: #07a0e7;
+    font-size: 24px;
+    padding-left: 20px;
+  }
+  #close {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #222;
+    font-size: 24px;
+  }
+  #lg-bag {
+    display: none;
+  }
 }
